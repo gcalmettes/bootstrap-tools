@@ -164,7 +164,27 @@ bootci(northern, stat=np.median, alpha=0.1)
 </li>
 </ul><p>Note that your values will differ slightly.</p>
 
-<h4>Difference of an estimate of two samples</h4>
+<h4>Comparison of two samples</h4>
+
+<p>From our samples, the difference in mean jump distance between the Northern
+and the Calaveras frogs is about 0.44 m. We can compute the 95% confidence
+intervals of this estimate to evaluate the statistical significance of this 
+difference as well as to gain an indication of the likely size of this
+difference.</p>
+
+<p>This can be done with the <code>bootci_diff</code> function as follow:</p>
+
+<pre><code># compute the 95% confidence interval of the difference in mean between the two sample
+bootci_diff(calaveras_sample, northern_sample)
+</code></pre>
+
+<p>This code give us a 95% confidence interval of <strong>[0.039, 0.847]</strong>.
+Your values will differ slightly. 
+The values do not include zero, and we can conclude that the observed 
+difference in jump distance mean between the two groups of frogs is unlikely to be a result of chance.</p>
+
+<p>This is illustrated in the figure below, where the dashed lines indicates the central 95%
+of the computed bootstrap differences, and the solid line indicates zero difference.</p>
 
 <p><img src="images/fig-differences.png" alt="fig-samples"></p>
       </section>
