@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Bootstrap-tools by gcalmettes</title>
+    <title>Statistical Perspectives by gcalmettes</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -17,8 +17,8 @@
   <body>
 
       <header>
-        <h1>Bootstrap-tools</h1>
-        <p></p>
+        <h1>Statistical Perspectives</h1>
+        <p>Making do with what you have: Use your bootstraps</p>
       </header>
 
       <div id="banner">
@@ -105,7 +105,6 @@ calaveras_sample = calaveras_population[:50]
 <h4>Inspection of the data</h4>
 
 <p>The top-left panel of the
-
 figure below shows the distribution of the jumps for the two groups of frogs, and
 the top-right panel display our samples taken from those populations.</p>
 
@@ -125,7 +124,6 @@ making difficult to use statistical tools based on the assumption of
 <em>normal distribution</em> of the data. The bootstrap method, however, does not need
 such a strong assumption, and therefore can be used to analyze our data.</p>
 
-
 <h4>Compute the bootstrap confidence intervals of an estimate of the data</h4>
 
 <p>Suppose we want to compute the confidence interval of the mean for each sample.
@@ -143,8 +141,10 @@ bootci(calaveras_sample)
 <p>Which gives the results below:</p>
 
 <ul>
-<li>Northern frogs: Mean 5.184, 95% CI [4.912, 5.472]</li>
-<li>Calaveras frogs: Mean 5.628, 95% CI [5.344, 5.931]</li>
+<li>Northern frogs: Mean <strong>5.184, 95% CI **[4.912, 5.472]</strong>
+</li>
+<li>Calaveras frogs: Mean <strong>5.628, 95% CI **[5.344, 5.931]</strong>
+</li>
 </ul><p>Note that your values will differ slightly.</p>
 
 <p>By default, the <code>bootci</code> function compute the 95% confidence intervals
@@ -157,11 +157,14 @@ interval of the median for the Northern frogs sample:</p>
 bootci(northern, stat=np.median, alpha=0.1)
 </code></pre>
 
-<p>Which returns</p>
+<p>Which returns:</p>
 
 <ul>
-<li>Norther frogs: Median 4.983, 90% CI [4.766, 5.174]</li>
-</ul><h4>Difference of an estimate of two samples</h4>
+<li>Norther frogs: <strong>Median 4.983, 90% CI [4.766, 5.174]</strong>
+</li>
+</ul><p>Note that your values will differ slightly.</p>
+
+<h4>Difference of an estimate of two samples</h4>
 
 <p><img src="images/fig-differences.png" alt="fig-samples"></p>
       </section>
