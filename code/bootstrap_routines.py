@@ -1,3 +1,4 @@
+# Copyright 2012 gcalmettes (gcalmettes@ucla.edu), BSD-style copyright and disclaimer apply
 #!/usr/local/bin/python
 
 # needed libraries
