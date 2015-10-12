@@ -1,46 +1,26 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta charset="UTF-8">
     <title>Statistical Perspectives by gcalmettes</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/main.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
+    <section class="page-header">
+      <h1 class="project-name">Statistical Perspectives</h1>
+      <h2 class="project-tagline">Making do with what you have: Use your bootstraps</h2>
+      <a href="https://github.com/gcalmettes/bootstrap-tools" class="btn">View on GitHub</a>
+      <a href="https://github.com/gcalmettes/bootstrap-tools/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/gcalmettes/bootstrap-tools/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-      <header>
-        <h1>Statistical Perspectives</h1>
-        <p>Making do with what you have: Use your bootstraps</p>
-      </header>
-
-      <div id="banner">
-        <span id="logo"></span>
-
-        <a href="https://github.com/gcalmettes/bootstrap-tools/tree/master" class="button fork"><strong>View On GitHub</strong></a>
-        <div class="downloads">
-          <span>Downloads:</span>
-          <ul>
-            <li><a href="https://github.com/gcalmettes/bootstrap-tools/zipball/master" class="button">ZIP</a></li>
-            <li><a href="https://github.com/gcalmettes/bootstrap-tools/tarball/master" class="button">TAR</a></li>
-          </ul>
-        </div>
-      </div><!-- end banner -->
-
-    <div class="wrapper">
-      <nav>
-        <ul></ul>
-      </nav>
-      <section>
-        <h3>What is it?</h3>
-
+    <section class="main-content">
+      <h3>
+<a id="what-is-it" class="anchor" href="#what-is-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is it?</h3>
 
 <p>This page is dedicated to providing more information about the code and the data used in the paper <strong><em>Making do with what you have: Use your bootstraps</em></strong> by <em>Guillaume Calmettes, Gordon Drummond and Sarah Vowler</em> (see <a href="http://jp.physoc.org/content/590/15/3403.full">paper on J. Physiol. website</a>).</p>
 
@@ -48,12 +28,14 @@
 
 <p>The code is written in the <a href="http://www.python.org/">Python</a> programming language, and requires the <a href="http://www.numpy.org/">Numpy</a> library which provides support for array manipulation.</p>
 
-<h3>Where to get it?</h3>
+<h3>
+<a id="where-to-get-it" class="anchor" href="#where-to-get-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>Where to get it?</h3>
 
-<p>The source code is currently hosted on GitHub at: <a href="https://github.com/gcalmettes/bootstrap-tools/tree/master">https://github.com/gcalmettes/bootstrap-tools</a>.
+<p>The source code is currently hosted on GitHub at: <a href="https://github.com/gcalmettes/bootstrap-tools">https://github.com/gcalmettes/bootstrap-tools</a>.
 You can directly view it or download it from the links at the top of this page.</p>
 
-<h3>What is inside?</h3>
+<h3>
+<a id="what-is-inside" class="anchor" href="#what-is-inside" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is inside?</h3>
 
 <p>Four bootstrap methods are provided in the source code:</p>
 
@@ -75,10 +57,13 @@ two data samples.</li>
 <li>
 <code>bootci_diff</code>: computes the confidence intervals of the difference of a statistic
 (<em>mean</em> by default) when comparing two data samples.</li>
-</ul><p>Please refer to the docstring of the functions to know more about the options available for each of
+</ul>
+
+<p>Please refer to the docstring of the functions to know more about the options available for each of
 them.</p>
 
-<h3>How does it work? (Practical example)</h3>
+<h3>
+<a id="how-does-it-work-practical-example" class="anchor" href="#how-does-it-work-practical-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>How does it work? (Practical example)</h3>
 
 <p>Let us use the data described in the paper, and provided in the <code>data</code> folder of the
 source code. The data represent the jump distances of two different groups of frogs,
@@ -103,7 +88,8 @@ northern_sample = northern_population[:50]
 calaveras_sample = calaveras_population[:50]
 </code></pre>
 
-<h4>Inspection of the data</h4>
+<h4>
+<a id="inspection-of-the-data" class="anchor" href="#inspection-of-the-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inspection of the data</h4>
 
 <p>The top-left panel of the
 figure below shows the distribution of the jumps for the two groups of frogs, and
@@ -125,7 +111,8 @@ making difficult to use statistical tools based on the assumption of
 <em>normal distribution</em> of the data. The bootstrap method, however, does not need
 such a strong assumption, and therefore can be used to analyze our data.</p>
 
-<h4>Compute the bootstrap confidence intervals of an estimate of the data</h4>
+<h4>
+<a id="compute-the-bootstrap-confidence-intervals-of-an-estimate-of-the-data" class="anchor" href="#compute-the-bootstrap-confidence-intervals-of-an-estimate-of-the-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Compute the bootstrap confidence intervals of an estimate of the data</h4>
 
 <p>Suppose we want to compute the confidence interval of the mean for each sample.
 This can be achieve with the <code>bootci</code> function, if you have imported it into
@@ -146,7 +133,9 @@ bootci(calaveras_sample)
 </li>
 <li>Calaveras frogs: Mean <strong>5.628, 95% CI [5.344, 5.931]</strong>
 </li>
-</ul><p>Note that your values will differ slightly.</p>
+</ul>
+
+<p>Note that your values will differ slightly.</p>
 
 <p>By default, the <code>bootci</code> function compute the 95% confidence intervals
 of the mean, but any other level of confidence and any other estimate of the sample
@@ -163,9 +152,12 @@ bootci(northern, stat=np.median, alpha=0.1)
 <ul>
 <li>Norther frogs: <strong>Median 4.983, 90% CI [4.766, 5.174]</strong>
 </li>
-</ul><p>Note that your values will differ slightly.</p>
+</ul>
 
-<h4>Comparison of two samples</h4>
+<p>Note that your values will differ slightly.</p>
+
+<h4>
+<a id="comparison-of-two-samples" class="anchor" href="#comparison-of-two-samples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Comparison of two samples</h4>
 
 <p>From our samples, the difference in mean jump distance between the Northern
 and the Calaveras frogs is about 0.44 m. We can compute the 95% confidence
@@ -188,14 +180,15 @@ difference in jump distance mean between the two groups of frogs is unlikely to 
 of the computed bootstrap differences, and the solid line indicates zero difference.</p>
 
 <p><img src="images/fig-differences.png" alt="fig-samples"></p>
-      </section>
-      <footer>
-        <p>Project maintained by <a href="https://github.com/gcalmettes">gcalmettes</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></small></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/gcalmettes/bootstrap-tools">Statistical Perspectives</a> is maintained by <a href="https://github.com/gcalmettes">gcalmettes</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
-    
+
+    </section>
+
+  
   </body>
 </html>
-
