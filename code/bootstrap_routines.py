@@ -56,8 +56,8 @@ def bootci(data, stat=np.mean, nboot=10000, replacement=True, alpha=0.05, method
 
     # Percentile Interval method (for the moment the only one available) 
     if method == 'pi':
-        ci = (sorted_stat[np.round(nboot*alpha/2)], 
-              sorted_stat[np.round(nboot*(1-alpha/2))])
+        ci = (sorted_stat[np.round(nboot*alpha/2).astype(int)], 
+              sorted_stat[np.round(nboot*(1-alpha/2)).astype(int)])
 
     if keepboot == True:
         return ci, sorted_stat
@@ -98,8 +98,8 @@ def bootci_diff(data1, data2, stat=np.mean, func=np.subtract, nboot=10000,
     bootdiff = func(boot_d1stat, boot_d2stat)
     sorted_bootdiff = np.sort(bootdiff)
     
-    ci_diff = (sorted_bootdiff[np.round(nboot*alpha/2)], 
-             sorted_bootdiff[np.round(nboot*(1-alpha/2))])
+    ci_diff = (sorted_bootdiff[np.round(nboot*alpha/2).astype(int)], 
+             sorted_bootdiff[np.round(nboot*(1-alpha/2)).astype(int)])
 
     if keepboot == True:
         return ci_diff, sorted_bootdiff
