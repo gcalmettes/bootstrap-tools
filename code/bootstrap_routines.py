@@ -176,11 +176,11 @@ def bootpv(data1, data2, stat=np.mean, func=np.subtract, nboot=10000,
         if diff_groups < 0:
             sign = "less than or equal to"
             ndiff = np.sum(param_func <= diff_groups)
-        print "Observed difference of two means: %.2f" % diff_groups 
-        print "%.d out of %.d experiments had a difference of two means %s %.2f" % \
-              (ndiff, nboot, sign, diff_groups)
-        print "The chance of getting a difference of two means %s %.2f is %.4f" % \
-              (sign, diff_groups, pvalue)
+        print("Observed difference of two means: {0:.2f}".format(diff_groups))
+        print("{0:d} out of {1:d} experiments had a difference of two means {2:s} {3:.2f}"\
+            .format(ndiff, nboot, sign, diff_groups))
+        print("The chance of getting a difference of two means {0:s} {1:.2f} is {2:.4f}"\
+              .format(sign, diff_groups, pvalue))
        
     if keepboot == True:
         return pvalue, param_func
